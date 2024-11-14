@@ -7,10 +7,12 @@
     font-family: "Montserrat", sans-serif;
 }
 
-.slider-wrapper .slider-item{
+.slider-wrapper .slider-item {
     position: relative;
     width: 100%;
     height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .slider-wrapper .slider-item::before{
@@ -28,5 +30,9 @@
 .slider-wrapper .slider-item .slide-content {
     color: #fff;
     z-index: 20;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px 10px;
+    max-width: 1400px;
     position: relative;
 }
