@@ -7,6 +7,12 @@
     font-family: "Montserrat", sans-serif;
 }
 
+.slider-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
 .slider-wrapper .slider-item {
     position: relative;
     width: 100%;
