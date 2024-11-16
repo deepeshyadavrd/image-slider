@@ -8,6 +8,7 @@
 }
 
 .slider-container {
+    position: relative;
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -96,4 +97,29 @@
 .slider-item .slide-content .slide-button:hover {
     color: #000;
     background: #fff;
+}
+
+.slider-container .slider-controls {
+    position: absolute;
+    bottom: 45px;
+    z-index: 20;
+    width: 100%;
+}
+
+.slider-controls .slider-pagination {
+    display: flex;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1400px;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.slider-pagination .slider-tab {
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 20px 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
