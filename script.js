@@ -14,7 +14,7 @@ const updateIndicator = (tab, index) => {
 const swiper = new Swiper(".slider-container",{
     effect: "fade",
     speed: 1300,
-    // autoplay: { delay: 4000 }
+    autoplay: { delay: 4000 },
     navigation: {
         prevEl: "#slide-prev",
         nextEl: "#slide-next"
@@ -23,7 +23,8 @@ const swiper = new Swiper(".slider-container",{
         slideChange: () => {
             const currentTabIndex = [...sliderTabs].indexOf(sliderTabs[swiper.activeIndex]);
             updateIndicator(sliderTabs[swiper.activeIndex], currentTabIndex);
-        }
+        },
+        reachEnd: () => swiper.autoplay.stop()
     }
 })
 // update slide and pagination on click

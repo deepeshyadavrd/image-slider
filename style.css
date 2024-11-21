@@ -49,6 +49,7 @@
 }
 
 .slider-wrapper .slider-item .slide-content {
+    opacity: 0;
     color: #fff;
     z-index: 20;
     width: 100%;
@@ -56,6 +57,18 @@
     padding: 0 20px 10px;
     max-width: 1400px;
     position: relative;
+}
+
+
+.slider-item.swiper-slide-active .slide-content {
+    animation: animate_opacity 0.8s 0.6s linear forwards;
+}
+
+
+@keyframes animate_opacity {
+    100% {
+        opacity: 1;
+    }
 }
 
 .slider-wrapper .slider-item .slide-content > * {
@@ -66,32 +79,72 @@
     font-weight: 700;
     text-transform: uppercase;
     margin-top: 5px;
+    opacity: 0;
+    transform: translateY(60%);
 }
 
 .slider-item .slide-content .slide-subtitle{
     font-size: 1rem;
     font-weight: normal;
+    opacity: 0;
+    transform: translateY(60%);
+}
+
+.slider-item.swiper-slide-active :where(.slide-title, .slide-subtitle) {
+    animation: animate_text 0.6s 0.6s linear forwards;
+}
+
+@keyframes animate_text {
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
 
 .slider-item .slide-content .slide-description {
     margin-top: 25px;
     line-height: 25px;
+    opacity: 0;
+    transform: translateY(60%);
+}
+.slider-item.swiper-slide-active .slide-description {
+    animation: animate_text 0.6s 1s linear forwards;
 }
 
 .slider-item .slide-content .slide-button {
     color: #fff;
     display: block;
-    width: 250px;
+    opacity: 0;
+    width: 0;
     padding: 13px 0;
     font-size: 0.8;
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 1px;
+    white-space: nowrap;
     margin-top: 45px;
     text-decoration: none;
     border: 2px solid #fff;
     transition: 0.5s ease;
+}
+.slider-item .slide-content .slide-button span {
+    opacity: 0;
+}
+
+.slider-item.swiper-slide-active .slide-button span {
+    animation: animate_opacity 0.6s 1.5s linear forwards;
+}
+
+.slider-item.swiper-slide-active .slide-button {
+    animation: animate_button 0.6s 1.3s linear forwards;
+}
+
+@keyframes animate_button {
+    100% {
+        opacity: 1;
+        width: 250px;
+    }
 }
 
 .slider-item .slide-content .slide-button:hover {
