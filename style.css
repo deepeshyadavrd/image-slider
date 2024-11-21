@@ -107,6 +107,7 @@
 }
 
 .slider-controls .slider-pagination {
+    position: relative;
     display: flex;
     margin: 0 auto;
     padding: 0 20px;
@@ -114,7 +115,12 @@
     list-style: none;
     justify-content: space-between;
 }
-
+.slider-pagination .slider-indicator{
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    border: 2px solid #fff;
+}
 .slider-pagination .slider-tab {
     color: #fff;
     text-align: center;
